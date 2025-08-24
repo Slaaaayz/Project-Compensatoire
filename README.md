@@ -1,4 +1,4 @@
-Pour lancer le projet, il faut d'abord lancer la commande suivante :
+## Pour lancer le projet, il faut d'abord lancer la commande suivante :
 
 ```bash
 composer install
@@ -15,7 +15,7 @@ Puis, aller sur le lien suivant :
 http://localhost:8000
 ```
 
-Et pour voir le blog, il faut aller sur le lien suivant :
+## Et pour voir le blog, il faut aller sur le lien suivant :
 
 ```bash
 http://localhost:8000
