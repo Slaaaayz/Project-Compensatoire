@@ -8,13 +8,17 @@ private const API_KEY = 'YOUR_API_KEY';
 ```
 
 ```bash
-Projet/composer install
+cd Projet/
+composer install
 ```
 
 Ensuite, il faut lancer la commande suivante :
 
+
+
 ```bash
-Projet/symfony server:start
+php bin/console doctrine:database:create
+symfony server:start
 ```
 Puis, aller sur le lien suivant :
 

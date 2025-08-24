@@ -10,7 +10,7 @@ use Symfony\Contracts\HttpClient\Exception\ServerExceptionInterface;
 class NbaApiService
 {
     private const API_BASE_URL = 'https://api.balldontlie.io/v1';
-    private const API_KEY = 'YOUR_API_KEY';
+    private const API_KEY = '4b53f95b-7ce3-4ff3-bd76-b7b6474e6b3b';
     private const RATE_LIMIT_DELAY = 15; // 15 secondes entre les requêtes (4 par minute)
     private const CACHE_DURATION = 1800; // 30 minutes de cache au lieu de 10
 
