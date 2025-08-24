@@ -1,0 +1,167 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {% if game.data is defined %}
+        Match #{{ game.data.id }} - Ynov Basket
+    {% else %}
+        Match #{{ game.id }} - Ynov Basket
+    {% endif %}
+{% endblock %}
+
+{% block body %}
+<div class="row">
+    <div class="col-12">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="{{ path('app_games') }}" class="text-decoration-none">
+                        <i class="fas fa-arrow-left me-1"></i>Retour aux matchs
+                    </a>
+                </li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+{% set gameData = game.data is defined ? game.data : game %}
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4 text-center">
+                        <i class="fas fa-gamepad fa-8x text-primary mb-3"></i>
+                        <h2 class="card-title">Match #{{ gameData.id }}</h2>
+                        {% if gameData.status %}
+                            <span class="badge bg-{{ gameData.status == 'Final' ? 'success' : (gameData.status == 'Scheduled' ? 'warning' : 'info') }} fs-6">
+                                {{ gameData.status }}
+                            </span>
+                        {% endif %}
+                    </div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            {% if gameData.date %}
+                                <div class="col-sm-6 mb-3">
+                                    <div class="stats-card">
+                                        <h6><i class="fas fa-calendar me-2"></i>Date</h6>
+                                        <p class="mb-0">{{ gameData.date|date('d/m/Y') }}</p>
+                                    </div>
+                                </div>
+                            {% endif %}
+                            
+                            {% if gameData.season %}
+                                <div class="col-sm-6 mb-3">
+                                    <div class="stats-card">
+                                        <h6><i class="fas fa-calendar-alt me-2"></i>Saison</h6>
+                                        <p class="mb-0">{{ gameData.season }}</p>
+                                    </div>
+                                </div>
+                            {% endif %}
+                            
+                            {% if gameData.period %}
+                                <div class="col-sm-6 mb-3">
+                                    <div class="stats-card">
+                                        <h6><i class="fas fa-clock me-2"></i>Période</h6>
+                                        <p class="mb-0">{{ gameData.period }}</p>
+                                    </div>
+                                </div>
+                            {% endif %}
+                            
+                            {% if gameData.time %}
+                                <div class="col-sm-6 mb-3">
+                                    <div class="stats-card">
+                                        <h6><i class="fas fa-stopwatch me-2"></i>Temps</h6>
+                                        <p class="mb-0">{{ gameData.time }}</p>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% if gameData.home_team or gameData.visitor_team %}
+    <div class="row mt-4">
+        <div class="col-12">
+            <h3 class="text-white mb-4">
+                <i class="fas fa-shield-alt me-2"></i>
+                Équipes participantes
+            </h3>
+            <div class="row">
+                {% if gameData.home_team %}
+                    <div class="col-md-6 mb-3">
+                        <div class="card team-card h-100" onclick="window.location.href='{{ path('app_team_show', {'id': gameData.home_team.id}) }}'">
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <i class="fas fa-shield-alt fa-4x text-primary mb-3"></i>
+                                    <h5 class="card-title">{{ gameData.home_team.full_name ?? gameData.home_team.name }}</h5>
+                                    {% if gameData.home_team.abbreviation %}
+                                        <span class="badge bg-secondary">{{ gameData.home_team.abbreviation }}</span>
+                                    {% endif %}
+                                    <p class="card-text text-muted mt-2">Équipe domicile</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+                
+                {% if gameData.visitor_team %}
+                    <div class="col-md-6 mb-3">
+                        <div class="card team-card h-100" onclick="window.location.href='{{ path('app_team_show', {'id': gameData.visitor_team.id}) }}'">
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <i class="fas fa-shield-alt fa-4x text-primary mb-3"></i>
+                                    <h5 class="card-title">{{ gameData.visitor_team.full_name ?? gameData.visitor_team.name }}</h5>
+                                    {% if gameData.visitor_team.abbreviation %}
+                                        <span class="badge bg-secondary">{{ gameData.visitor_team.abbreviation }}</span>
+                                    {% endif %}
+                                    <p class="card-text text-muted mt-2">Équipe visiteur</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endif %}
+
+{% if gameData.home_team_score is defined or gameData.visitor_team_score is defined %}
+    <div class="row mt-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title text-center mb-4">
+                        <i class="fas fa-trophy me-2"></i>
+                        Score
+                    </h4>
+                    <div class="row text-center align-items-center">
+                        {% if gameData.home_team %}
+                            <div class="col-4">
+                                <h3 class="text-primary mb-2">{{ gameData.home_team.abbreviation ?? gameData.home_team.full_name ?? gameData.home_team.name }}</h3>
+                                <h2 class="display-4 fw-bold">{{ gameData.home_team_score ?? 'N/A' }}</h2>
+                            </div>
+                        {% endif %}
+                        
+                        <div class="col-4">
+                            <h1 class="text-muted fw-bold">VS</h1>
+                        </div>
+                        
+                        {% if gameData.visitor_team %}
+                            <div class="col-4">
+                                <h3 class="text-primary mb-2">{{ gameData.visitor_team.abbreviation ?? gameData.visitor_team.full_name ?? gameData.visitor_team.name }}</h3>
+                                <h2 class="display-4 fw-bold">{{ gameData.visitor_team_score ?? 'N/A' }}</h2>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endif %}
+{% endblock %}
+

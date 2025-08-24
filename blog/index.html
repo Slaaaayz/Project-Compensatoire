@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapport de Projet Compensatoire - Développement Web Symfony</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home">
+                <i class="fas fa-code me-2"></i>Projet Compensatoire Dev Web
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#introduction">Introduction</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#remerciements">Remerciements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contexte">Contexte</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projet">Projet</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#missions">Missions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#competences">Compétences</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#difficultes">Difficultés</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#bilan">Bilan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#impact">Impact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#conclusion">Conclusion</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section d'accueil -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-8 mx-auto text-center text-white">
+                    <h1 class="display-3 fw-bold mb-4">
+                        <i class="fas fa-laptop-code me-3"></i>
+                        Rapport de Projet Compensatoire
+                    </h1>
+                    <h2 class="h3 mb-4">Développement Web Symfony - Application Ynov Basket</h2>
+                    <p class="lead mb-5">
+                        Découvrez mon expérience professionnelle dans le développement d'une application web moderne 
+                        utilisant Symfony, l'intégration d'APIs externes et la création d'interfaces utilisateur.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#introduction" class="btn btn-light btn-lg me-3">
+                            <i class="fas fa-arrow-down me-2"></i>Commencer la lecture
+                        </a>
+                        <a href="#projet" class="btn btn-outline-light btn-lg">
+                            <i class="fas fa-project-diagram me-2"></i>Voir le projet
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- Section Introduction -->
+    <section id="introduction" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="section-header text-center mb-5">
+                        <h2 class="display-5 fw-bold text-primary">Introduction</h2>
+                        <div class="section-divider"></div>
+                    </div>
+                    <div class="content-card">
+                        <p class="lead">
+                            Ce rapport présente mon expérience lors de la réalisation de mon projet compensatoire 
+                            en développement web dans le cadre de ma formation chez Ynov.
+                        </p>
+                        <p>
+                            Durant cette période, j'ai eu l'opportunité de développer une application web complète 
+                            utilisant le framework Symfony, intégrant une API externe de données NBA et créant une 
+                            interface utilisateur moderne et intuitive.
+                        </p>
+                        <p>
+                            Cette expérience m'a permis de mettre en pratique mes connaissances théoriques, 
+                            d'acquérir de nouvelles compétences techniques et de démontrer mes capacités 
+                            en développement web moderne.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Remerciements -->
+    <section id="remerciements" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="section-header text-center mb-5">
+                        <h2 class="display-5 fw-bold text-primary">Remerciements</h2>
+                        <div class="section-divider"></div>
+                    </div>
+                    <div class="content-card">
+                        <p class="lead">
+                            Je tiens à exprimer ma gratitude envers toutes les personnes qui ont contribué 
+                            au succès de ce stage.
+                        </p>
+                        <div class="row mt-4">
+                            <div class="col-md-4">
+                                <div class="thank-card">
+                                    <i class="fas fa-graduation-cap fa-2x text-primary mb-3"></i>
+                                    <h5>Mes Formateurs Ynov</h5>
+                                    <p>Pour m'avoir donné les bases techniques nécessaires et m'avoir accompagné dans ce projet compensatoire.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="thank-card">
+                                    <i class="fas fa-users fa-2x text-primary mb-3"></i>
+                                    <h5>Mes Camarades de Promotion</h5>
+                                    <p>Pour leur soutien, nos échanges techniques et l'entraide mutuelle tout au long de la formation.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="thank-card">
+                                    <i class="fas fa-building fa-2x text-primary mb-3"></i>
+                                    <h5>L'École Ynov</h5>
+                                    <p>Pour m'avoir offert cette opportunité de projet compensatoire et d'évaluation de mes compétences.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contexte -->
+    <section id="contexte" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="section-header text-center mb-5">
+                        <h2 class="display-5 fw-bold text-primary">Présentation du Contexte</h2>
+                        <div class="section-divider"></div>
+                    </div>
+                    <div class="content-card">
+                        <div class="context-info">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="info-card">
+                                        <i class="fas fa-building fa-2x text-primary mb-3"></i>
+                                        <h5>L'École</h5>
+                                        <p><strong>Nom :</strong> Ynov</p>
+                                        <p><strong>Secteur :</strong> Formation en informatique et développement</p>
+                                        <p><strong>Localisation :</strong> Campus Ynov</p>
+                                        <p><strong>Spécialité :</strong> Formation aux métiers du numérique</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="info-card">
+                                        <i class="fas fa-user-graduate fa-2x text-primary mb-3"></i>
+                                        <h5>Mon Profil</h5>
+                                        <p><strong>Formation :</strong> Informatique spécialité cybersécurité</p>
+                                        <p><strong>Niveau :</strong> Étudiant en formation professionnelle</p>
+                                        <p><strong>Type de projet :</strong> Projet compensatoire</p>
+                                        <p><strong>Missions :</strong> Développement d'applications web</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-12">
+                                    <div class="context-description">
+                                        <h5>Contexte du Projet Compensatoire</h5>
+                                        <p>
+                                            Dans le cadre de ma formation chez Ynov, j'ai eu l'opportunité de réaliser un projet compensatoire 
+                                            en développement web. Ce projet s'inscrit dans le cadre de l'évaluation de mes compétences 
+                                            et me permet de mettre en pratique les connaissances acquises pendant ma formation.
+                                        </p>
+                                        <p>
+                                            L'objectif était de créer une application web moderne permettant aux utilisateurs 
+                                            d'accéder facilement aux données des joueurs, équipes et matchs de la NBA, 
+                                            en utilisant les technologies web les plus récentes, notamment le framework Symfony.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Projet -->
+    <section id="projet" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="section-header text-center mb-5">
+                        <h2 class="display-5 fw-bold text-primary">Présentation du Projet</h2>
+                        <div class="section-divider"></div>
+                    </div>
+                    <div class="content-card">
+                        <div class="project-overview">
+                            <h3 class="text-primary mb-4">Ynov Basket - Application de Gestion NBA</h3>
+                            
+                            <div class="project-details mb-4">
+                                <h5><i class="fas fa-bullseye me-2"></i>Objectif du Projet</h5>
+                                <p>
+                                    Développer une application web moderne permettant aux utilisateurs de consulter, 
+                                    naviguer et interagir avec les données de la NBA (joueurs, équipes, matchs) 
+                                    de manière intuitive et responsive.
+                                </p>
+                            </div>
+
+                            <div class="project-features mb-4">
+                                <h5><i class="fas fa-list-check me-2"></i>Fonctionnalités Principales</h5>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <ul class="feature-list">
+                                            <li><i class="fas fa-user me-2 text-success"></i>Gestion des joueurs NBA</li>
+                                            <li><i class="fas fa-shield-alt me-2 text-success"></i>Gestion des équipes</li>
+                                            <li><i class="fas fa-gamepad me-2 text-success"></i>Suivi des matchs</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <ul class="feature-list">
+                                            <li><i class="fas fa-users me-2 text-success"></i>Système d'authentification</li>
+                                            <li><i class="fas fa-mobile-alt me-2 text-success"></i>Interface responsive</li>
+                                            <li><i class="fas fa-database me-2 text-success"></i>Intégration API externe</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-tech mb-4">
+                                <h5><i class="fas fa-cogs me-2"></i>Technologies Utilisées</h5>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">Symfony 6.4</span>
+                                    <span class="tech-badge">PHP 8.1+</span>
+                                    <span class="tech-badge">Twig</span>
+                                    <span class="tech-badge">Bootstrap 5</span>
+                                    <span class="tech-badge">JavaScript</span>
+                                    <span class="tech-badge">PostgreSQL</span>
+                                    <span class="tech-badge">API REST</span>
+                                </div>
+                            </div>
+
+                            <div class="project-architecture">
+                                <h5><i class="fas fa-sitemap me-2"></i>Architecture de l'Application</h5>
+                                <p>
+                                    L'application suit le pattern MVC (Modèle-Vue-Contrôleur) de Symfony, 
+                                    avec une séparation claire des responsabilités. L'intégration de l'API 
+                                    BallDontLie.io permet d'accéder aux données NBA en temps réel, 
+                                    tandis que l'interface utilisateur offre une expérience moderne et intuitive.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Missions -->
+    <section id="missions" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="section-header text-center mb-5">
+                        <h2 class="display-5 fw-bold text-primary">Missions Réalisées</h2>
+                        <div class="section-divider"></div>
+                    </div>
+                    <div class="content-card">
+                        <div class="missions-timeline">
+                            <div class="mission-item">
+                                <div class="mission-header">
+                                    <div class="mission-number">1</div>
+                                    <h5>Configuration de l'Environnement de Développement</h5>
+                                </div>
+                                <div class="mission-content">
+                                    <p>
+                                        Mise en place de l'environnement Symfony avec tous les bundles nécessaires 
+                                        (ORM, Maker, Twig, Security, HTTP Client). Configuration de la base de données 
+                                        PostgreSQL et installation des dépendances via Composer.
+                                    </p>
+                                    <div class="mission-tech">
+                                        <span class="tech-tag">Symfony</span>
+                                        <span class="tech-tag">Composer</span>
+                                        <span class="tech-tag">PostgreSQL</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mission-item">
+                                <div class="mission-header">
+                                    <div class="mission-number">2</div>
+                                    <h5>Système d'Authentification et de Sécurité</h5>
+                                </div>
+                                <div class="mission-content">
+                                    <p>
+                                        Implémentation d'un système de connexion/inscription complet avec gestion des rôles, 
+                                        protection CSRF, et sécurisation des routes. Création des entités User et gestion 
+                                        des sessions utilisateur.
+                                    </p>
+                                    <div class="mission-tech">
+                                        <span class="tech-tag">Security Bundle</span>
+                                        <span class="tech-tag">CSRF Protection</span>
+                                        <span class="tech-tag">User Management</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mission-item">
+                                <div class="mission-header">
+                                    <div class="mission-number">3</div>
+                                    <h5>Intégration de l'API BallDontLie.io</h5>
+                                </div>
+                                <div class="mission-content">
+                                    <p>
+                                        Développement d'un service dédié pour communiquer avec l'API NBA, incluant 
+                                        la gestion des rate limits, la mise en cache des réponses, et la gestion 
+                                        robuste des erreurs. Implémentation de la pagination cursor-based.
+                                    </p>
+                                    <div class="mission-tech">
+                                        <span class="tech-tag">HTTP Client</span>
+                                        <span class="tech-tag">API Integration</span>
+                                        <span class="tech-tag">Rate Limiting</span>
+                                        <span class="tech-tag">Caching</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mission-item">
+                                <div class="mission-header">
+                                    <div class="mission-number">4</div>
+                                    <h5>Interface Utilisateur et Navigation</h5>
+                                </div>
+                                <div class="mission-content">
+                                    <p>
+                                        Création d'une interface moderne avec Bootstrap 5, implémentation de la navigation 
+                                        entre joueurs, équipes et matchs. Développement de cartes interactives et de 
+                                        pages de détail avec navigation croisée entre les entités.
+                                    </p>
+                                    <div class="mission-tech">
+                                        <span class="tech-tag">Bootstrap 5</span>
+                                        <span class="tech-tag">Twig Templates</span>
+                                        <span class="tech-tag">Responsive Design</span>
+                                        <span class="tech-tag">JavaScript</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mission-item">
+                                <div class="mission-header">
+                                    <div class="mission-number">5</div>
+                                    <h5>Gestion des Données et Pagination</h5>
+                                </div>
+                                <div class="mission-content">
+                                    <p>
+                                        Implémentation de la pagination pour les grandes listes de données, 
+                                        gestion des métadonnées de l'API, et optimisation des performances 
+                                        avec un système de cache intelligent.
+                                    </p>
+                                    <div class="mission-tech">
+                                        <span class="tech-tag">Pagination</span>
+                                        <span class="tech-tag">Data Management</span>
+                                        <span class="tech-tag">Performance</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mission-item">
+                                <div class="mission-header">
+                                    <div class="mission-number">6</div>
+                                    <h5>Tests et Optimisations</h5>
+                                </div>
+                                <div class="mission-content">
+                                    <p>
+                                        Tests complets de toutes les fonctionnalités, résolution des problèmes 
+                                        de format de données, et optimisation de l'expérience utilisateur. 
+                                        Mise en place de la gestion d'erreurs robuste. Gestion autonome 
+                                        de tout le cycle de développement.
+                                    </p>
+                                    <div class="mission-tech">
+                                        <span class="tech-tag">Testing</span>
+                                        <span class="tech-tag">Error Handling</span>
+                                        <span class="tech-tag">UX Optimization</span>
+                                        <span class="tech-tag">Autonomous Development</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Compétences -->
+    <section id="competences" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="section-header text-center mb-5">
+                        <h2 class="display-5 fw-bold text-primary">Compétences Mobilisées</h2>
+                        <div class="section-divider"></div>
+                    </div>
+                    <div class="content-card">
+                        <div class="skills-categories">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="skill-category">
+                                        <h5><i class="fas fa-code me-2 text-primary"></i>Compétences Techniques</h5>
+                                        <div class="skill-list">
+                                            <div class="skill-item">
+                                                <span class="skill-name">Symfony Framework</span>
+                                            </div>
+                                            <div class="skill-item">
+                                                <span class="skill-name">PHP 8.1+</span>
+                                            </div>
+                                            <div class="skill-item">
+                                                <span class="skill-name">Twig Templating</span>
+                                            </div>
+                                            <div class="skill-item">
+                                                <span class="skill-name">Bootstrap 5</span>
+                                            </div>
+                                            <div class="skill-item">
+                                                <span class="skill-name">JavaScript</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="skill-category">
+                                        <h5><i class="fas fa-database me-2 text-primary"></i>Compétences Backend</h5>
+                                        <div class="skill-list">
+                                            <div class="skill-item">
+                                                <span class="skill-name">Doctrine ORM</span>
+                                            </div>
+                                            <div class="skill-item">
+                                                <span class="skill-name">API Integration</span>
+                                            </div>
+                                            <div class="skill-item">
+                                                <span class="skill-name">Security Management</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row mt-4">
+                                <div class="col-md-6">
+                                    <div class="skill-category">
+                                        <h5><i class="fas fa-palette me-2 text-primary"></i>Compétences Frontend</h5>
+                                        <div class="skill-list">
+                                            <div class="skill-item">
+                                                <span class="skill-name">Responsive Design</span>
+                                            </div>
+                                            <div class="skill-item">
+                                                <span class="skill-name">User Experience</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="skill-category">
+                                        <h5><i class="fas fa-tools me-2 text-primary"></i>Compétences Méthodologiques</h5>
+                                        <div class="skill-list">
+                                            <div class="skill-item">
+                                                <span class="skill-name">Gestion de Projet</span>
+                                            </div>
+                                            <div class="skill-item">
+                                                <span class="skill-name">Résolution de Problèmes</span>
+                                            </div>
+                                            <div class="skill-item">
+                                                <span class="skill-name">Documentation</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Difficultés -->
+    <section id="difficultes" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="section-header text-center mb-5">
+                        <h2 class="display-5 fw-bold text-primary">Difficultés Rencontrées et Solutions</h2>
+                        <div class="section-divider"></div>
+                    </div>
+                    <div class="content-card">
+                        <div class="challenges-list">
+                            <div class="challenge-item">
+                                <div class="challenge-header">
+                                    <i class="fas fa-exclamation-triangle text-warning me-2"></i>
+                                    <h5>Intégration de l'API et Gestion des Rate Limits</h5>
+                                </div>
+                                <div class="challenge-content">
+                                    <p><strong>Problème :</strong> L'API BallDontLie.io impose une limite stricte de 4 requêtes par minute, causant des erreurs 429 (Too Many Requests).</p>
+                                    <p><strong>Solution :</strong> Implémentation d'un système de rate limiting avec délais automatiques et mise en place d'un cache intelligent pour réduire les appels API.</p>
+                                    <div class="solution-code">
+                                        <code>RATE_LIMIT_DELAY = 15 secondes entre requêtes<br>
+                                        CACHE_DURATION = 30 minutes de cache</code>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="challenge-item">
+                                <div class="challenge-header">
+                                    <i class="fas fa-exclamation-triangle text-warning me-2"></i>
+                                    <h5>Gestion de l'Authentification Symfony</h5>
+                                </div>
+                                <div class="challenge-content">
+                                    <p><strong>Problème :</strong> Difficultés avec l'authenticateur personnalisé et les tokens CSRF, causant des boucles de redirection.</p>
+                                    <p><strong>Solution :</strong> Retour à l'authentification standard de Symfony avec configuration correcte des paramètres CSRF et des routes de sécurité.</p>
+                                </div>
+                            </div>
+
+                            <div class="challenge-item">
+                                <div class="challenge-header">
+                                    <i class="fas fa-exclamation-triangle text-warning me-2"></i>
+                                    <h5>Structure des Données de l'API</h5>
+                                </div>
+                                <div class="challenge-content">
+                                    <p><strong>Problème :</strong> L'API retourne des données dans un format `data.field` au lieu de `field` directement, causant des erreurs dans les templates.</p>
+                                    <p><strong>Solution :</strong> Création de variables intermédiaires dans les templates Twig pour gérer les deux formats possibles et rendre l'application robuste.</p>
+                                </div>
+                            </div>
+
+                            <div class="challenge-item">
+                                <div class="challenge-header">
+                                    <i class="fas fa-exclamation-triangle text-warning me-2"></i>
+                                    <h5>Pagination Cursor-based</h5>
+                                </div>
+                                <div class="challenge-content">
+                                    <p><strong>Problème :</strong> L'API utilise un système de pagination par curseur au lieu de pages numérotées, et ne fournit pas de `total_count`.</p>
+                                    <p><strong>Solution :</strong> Adaptation de la logique de pagination pour utiliser les curseurs et calcul d'un `total_count` approximatif basé sur les métadonnées disponibles.</p>
+                                </div>
+                            </div>
+
+                            <div class="challenge-item">
+                                <div class="challenge-header">
+                                    <i class="fas fa-exclamation-triangle text-warning me-2"></i>
+                                    <h5>Gestion des Erreurs et Debugging</h5>
+                                </div>
+                                <div class="challenge-content">
+                                    <p><strong>Problème :</strong> Difficultés à identifier la source des erreurs lors de l'intégration de l'API et des templates.</p>
+                                    <p><strong>Solution :</strong> Création de contrôleurs de debug temporaires, utilisation de `curl` pour tester l'API directement, et amélioration progressive de la gestion d'erreurs.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Bilan -->
+    <section id="bilan" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="section-header text-center mb-5">
+                        <h2 class="display-5 fw-bold text-primary">Bilan Personnel</h2>
+                        <div class="section-divider"></div>
+                    </div>
+                    <div class="content-card">
+                        <div class="bilan-content">
+                            <div class="bilan-section mb-4">
+                                <h5><i class="fas fa-chart-line me-2 text-success"></i>Apprentissages Techniques</h5>
+                                <p>
+                                    Ce projet m'a permis d'approfondir considérablement mes connaissances du framework Symfony. 
+                                    J'ai appris à gérer des aspects avancés comme l'intégration d'APIs externes, la gestion 
+                                    de la sécurité, et l'optimisation des performances. La maîtrise de Twig, de Doctrine ORM, 
+                                    et des bonnes pratiques de développement web a été un gain significatif.
+                                </p>
+                            </div>
+
+                            <div class="bilan-section mb-4">
+                                <h5><i class="fas fa-lightbulb me-2 text-success"></i>Développement de Compétences</h5>
+                                <p>
+                                    J'ai développé ma capacité à résoudre des problèmes techniques complexes de manière autonome. 
+                                    La gestion des rate limits API, la résolution des problèmes d'authentification, et l'adaptation 
+                                    aux contraintes techniques m'ont appris la persévérance et la créativité dans la résolution 
+                                    de problèmes.
+                                </p>
+                            </div>
+
+                            <div class="bilan-section mb-4">
+                                <h5><i class="fas fa-users me-2 text-success"></i>Expérience de Formation</h5>
+                                <p>
+                                    Travailler sur ce projet compensatoire m'a permis de comprendre l'importance de la 
+                                    qualité du code, de la documentation, et de l'organisation du travail. J'ai appris à 
+                                    gérer mon temps efficacement et à prioriser les tâches selon leur importance et leur urgence.
+                                </p>
+                            </div>
+
+                            <div class="bilan-section mb-4">
+                                <h5><i class="fas fa-target me-2 text-success"></i>Objectifs Atteints</h5>
+                                <ul class="bilan-list">
+                                    <li>Développement d'une application web complète et fonctionnelle</li>
+                                    <li>Maîtrise des technologies Symfony et des bonnes pratiques</li>
+                                    <li>Intégration réussie d'une API externe avec gestion des contraintes</li>
+                                    <li>Création d'une interface utilisateur moderne et responsive</li>
+                                </ul>
+                            </div>
+
+                            <div class="bilan-section">
+                                <h5><i class="fas fa-star me-2 text-success"></i>Niveau de Satisfaction</h5>
+                                <div class="satisfaction-meter">
+                                    <div class="satisfaction-label">Satisfaction globale :</div>
+                                    <div class="satisfaction-stars">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                    </div>
+                                    <div class="satisfaction-text">5/5 - Très satisfait</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Impact -->
+    <section id="impact" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="section-header text-center mb-5">
+                        <h2 class="display-5 fw-bold text-primary">Impact sur Mon Projet Professionnel</h2>
+                        <div class="section-divider"></div>
+                    </div>
+                    <div class="content-card">
+                        <div class="impact-content">
+                            <div class="impact-section mb-4">
+                                <h5><i class="fas fa-road me-2 text-primary"></i>Orientation Professionnelle</h5>
+                                <p>
+                                    Bien que ce projet m'ait permis de découvrir et d'apprécier le développement web, 
+                                    il a confirmé mon orientation vers la cybersécurité. J'ai apprécié particulièrement 
+                                    les aspects de sécurité que j'ai pu implémenter (authentification, protection CSRF, 
+                                    gestion des sessions) et cela renforce mon intérêt pour ce domaine.
+                                </p>
+                            </div>
+
+                            <div class="impact-section mb-4">
+                                <h5><i class="fas fa-graduation-cap me-2 text-primary"></i>Formation Continue</h5>
+                                <p>
+                                    Ce projet m'a motivé à continuer à me former sur les technologies web modernes, 
+                                    particulièrement pour comprendre les enjeux de sécurité. J'envisage de me spécialiser 
+                                    en cybersécurité tout en gardant une base solide en développement pour mieux 
+                                    comprendre les vulnérabilités et les bonnes pratiques.
+                                </p>
+                            </div>
+
+
+
+
+
+                            <div class="impact-section">
+                                <h5><i class="fas fa-rocket me-2 text-primary"></i>Objectifs de Carrière</h5>
+                                <p>
+                                    À court terme, je vise un poste en cybersécurité junior, peut-être en tant qu'analyste 
+                                    sécurité ou pentester. À moyen terme, j'aspire à devenir expert en cybersécurité, 
+                                    spécialisé dans la sécurité des applications web et la protection des systèmes.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Conclusion -->
+    <section id="conclusion" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="section-header text-center mb-5">
+                        <h2 class="display-5 fw-bold text-primary">Conclusion</h2>
+                        <div class="section-divider"></div>
+                    </div>
+                    <div class="content-card">
+                        <div class="conclusion-content">
+                            <p class="lead">
+                                Ce projet compensatoire de développement web a été une expérience enrichissante qui a considérablement 
+                                contribué à ma formation et à mon développement personnel.
+                            </p>
+                            
+                            <p>
+                                Au-delà des compétences techniques acquises, j'ai appris l'importance de la persévérance 
+                                dans la résolution de problèmes, de l'organisation du travail, et de l'adaptation aux 
+                                contraintes techniques. Chaque difficulté rencontrée a été une opportunité d'apprentissage 
+                                et de croissance.
+                            </p>
+                            
+                            <p>
+                                L'application Ynov Basket que j'ai développée représente non seulement une réalisation 
+                                technique satisfaisante, mais aussi la preuve de ma capacité à mener un projet complexe 
+                                de bout en bout. L'intégration réussie de l'API NBA, la création d'une interface 
+                                utilisateur moderne, et la gestion des défis techniques m'ont donné confiance en mes 
+                                capacités de développeur.
+                            </p>
+                            
+                            <p>
+                                Cette expérience confirme mon choix d'orientation vers le développement web et m'ouvre 
+                                de nouvelles perspectives professionnelles. Je suis maintenant prêt à relever de nouveaux 
+                                défis et à continuer à développer mes compétences dans ce domaine passionnant.
+                            </p>
+                            
+                            <div class="conclusion-highlights">
+                                <h5>Points Clés de cette Expérience :</h5>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <ul class="highlight-list">
+                                            <li><i class="fas fa-check-circle text-success me-2"></i>Maîtrise du framework Symfony</li>
+                                            <li><i class="fas fa-check-circle text-success me-2"></i>Intégration d'APIs externes</li>
+                                            <li><i class="fas fa-check-circle text-success me-2"></i>Gestion de la sécurité web</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <ul class="highlight-list">
+                                            <li><i class="fas fa-check-circle text-success me-2"></i>Développement frontend moderne</li>
+                                            <li><i class="fas fa-check-circle text-success me-2"></i>Résolution de problèmes complexes</li>
+                                            <li><i class="fas fa-check-circle text-success me-2"></i>Gestion de projet autonome</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="conclusion-final">
+                                <p class="text-center fw-bold">
+                                    <i class="fas fa-heart text-danger me-2"></i>
+                                    Merci pour cette expérience enrichissante !
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p class="mb-0">
+                <i class="fas fa-code me-2"></i>
+                Rapport de Projet Compensatoire - Développement Web Symfony | 
+                <i class="fas fa-calendar me-2"></i>
+                2024
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+

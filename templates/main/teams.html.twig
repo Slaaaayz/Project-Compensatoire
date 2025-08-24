@@ -1,0 +1,92 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Équipes - Ynov Basket{% endblock %}
+
+{% block body %}
+<div class="row">
+    <div class="col-12">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1 class="text-white">
+                <i class="fas fa-shield-alt me-2"></i>
+                Équipes NBA
+            </h1>
+            <div class="stats-card">
+                <i class="fas fa-chart-bar me-2"></i>
+                {% if meta and meta.total_count %}
+                    {{ teams|length }} équipes affichées
+                    {% if meta.total_count > teams|length %}
+                        <br><small class="text-muted">Total estimé: {{ meta.total_count }}+</small>
+                    {% endif %}
+                {% else %}
+                    {{ teams|length }} équipes
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% if teams is empty %}
+    <div class="row">
+        <div class="col-12">
+            <div class="card text-center">
+                <div class="card-body">
+                    <i class="fas fa-exclamation-triangle text-warning" style="font-size: 3rem;"></i>
+                    <h3 class="mt-3">Aucune équipe trouvée</h3>
+                    {% if error is defined and error %}
+                        <p class="text-muted">{{ error }}</p>
+                    {% else %}
+                        <p class="text-muted">Impossible de récupérer les données des équipes pour le moment.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% else %}
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
+        {% for team in teams %}
+            <div class="col">
+                <div class="card team-card h-100" onclick="window.location.href='{{ path('app_team_show', {'id': team.id}) }}'">
+                    <div class="card-body">
+                        <div class="text-center">
+                            <i class="fas fa-shield-alt fa-4x text-success mb-3"></i>
+                            <h5 class="card-title">{{ team.full_name }}</h5>
+                            <p class="card-text text-muted">
+                                <i class="fas fa-map-marker-alt me-1"></i>
+                                {{ team.city }}, {{ team.conference }}
+                            </p>
+                            <span class="badge bg-primary">{{ team.abbreviation }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    {% if meta and (meta.next_cursor is defined or meta.total_count > teams|length) %}
+        <nav aria-label="Navigation des équipes">
+            <ul class="pagination justify-content-center">
+                {% if currentPage > 1 %}
+                    <li class="page-item">
+                        <a class="page-link" href="{{ path('app_teams', {'page': currentPage - 1}) }}">
+                            <i class="fas fa-chevron-left"></i> Précédent
+                        </a>
+                    </li>
+                {% endif %}
+
+                <li class="page-item active">
+                    <span class="page-link">Page {{ currentPage }}</span>
+                </li>
+
+                {% if meta.next_cursor is defined or meta.total_count > teams|length %}
+                    <li class="page-item">
+                        <a class="page-link" href="{{ path('app_teams', {'page': currentPage + 1}) }}">
+                            Suivant <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </li>
+                {% endif %}
+            </ul>
+        </nav>
+    {% endif %}
+{% endif %}
+{% endblock %}
+
